@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Sign Up Now!</h2>
+        <form id="signupForm" onsubmit="return data();">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" onblur="blurR(this)" onfocus="focusG(this)">
+                <br>
+
+                <label for="username">Preferred Username:</label><br>
+                <input type="text" id="username" name="username" onblur="blurR(this)" onfocus="focusG(this)">
+                <br>
+
+                <label for="age">Age:</label><br>
+                <input type="number" id="age" name="age" min="0" max="100" onblur="blurR(this)" onfocus="focusG(this)">
+                <br>
+
+                <label for="gender">Gender:</label><br>
+                <select name="gender" id="gender" onblur="blurR(this)" onfocus="focusG(this)">
+                    <option value="N/A">N/A</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="PreferNotToMention">Prefer not to mention</option>
+                </select>
+                <br>
+
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" onblur="blurR(this)" onfocus="focusG(this)">
+                <br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" onblur="blurR(this)" onfocus="focusG(this)">
+                <br>
+
+                <label for="address">Address:</label><br>
+                <textarea id="address" name="address" onblur="blurR(this)" onfocus="focusG(this)"></textarea>
+                <br>
+
+                <label for="interests">Interests:</label><br>
+                <textarea id="interests" name="interests" onblur="blurR(this)" onfocus="focusG(this)"></textarea>
+                <br>
+            </fieldset>
+
+            <button type="submit">Submit</button>
+            <button type="reset" onclick="resetdata()">Reset</button>
+        </form>
+
+        <div id="userData">(Your information will appear here after submission.)</div>
+    </div>
+</body>
+</html>
